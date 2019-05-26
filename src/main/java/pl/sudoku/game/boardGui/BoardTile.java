@@ -1,9 +1,9 @@
-package pl.sudoku.game.board-gui;
+package pl.sudoku.game.boardGui;
 
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
 
-import java.awt.Point;
+import java.awt.*;
 
 public class BoardTile extends StackPane {
 
