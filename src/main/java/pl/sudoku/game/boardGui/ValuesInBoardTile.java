@@ -22,12 +22,11 @@ public class ValuesInBoardTile  extends DefaultBoardTileFactory {
     @Override
     public BoardTile prepareTile(int aX, int aY) {
         BoardTile boardTile = decorated.prepareTile(aX, aY);
-
-        BorderPane creaturePane = new BorderPane();
+        BorderPane valuesPane = new BorderPane();
         boardValues.setFont(Font.font("Arial", 14));
-        creaturePane.setCenter(boardValues);
-        creaturePane.setAlignment(boardValues, Pos.CENTER);
-        boardTile.getChildren().add(creaturePane);
+        valuesPane.setCenter(boardValues);
+        valuesPane.setAlignment(boardValues, Pos.CENTER);
+        boardTile.getChildren().add(valuesPane);
         return boardTile;
     }
 }

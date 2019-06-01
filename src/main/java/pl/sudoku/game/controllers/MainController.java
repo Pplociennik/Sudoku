@@ -38,7 +38,9 @@ public class MainController {
 
 
                 DefaultBoardTileFactory tileFactory = new DefaultBoardTileFactory();
-                tileFactory = new ValuesInBoardTile(tileFactory,sudoku,x,y);
+                if(sudoku.getMat()[x][y] != 0) {
+                    tileFactory = new ValuesInBoardTile(tileFactory, sudoku, x, y);
+                }
                 BoardTile boardTile = tileFactory.prepareTile(x, y);
 
                 gridMap.add(boardTile, x, y);

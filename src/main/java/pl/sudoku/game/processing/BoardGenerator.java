@@ -1,13 +1,16 @@
 package pl.sudoku.game.processing;
 
+import com.sun.deploy.util.ArrayUtil;
+
 public class BoardGenerator {
-    int[] mat[];
-    int N; // number of columns/rows.
-    int SRN; // square root of N
-    int K; // No. Of missing digits
+
+  private  Integer [][] mat;
+  private  Integer N; // number of columns/rows.
+  private  Integer SRN; // square root of N
+  private  Integer K; // No. Of missing digits
 
     // Constructor
-    public BoardGenerator(int N, int K) {
+    public BoardGenerator(Integer N, Integer K) {
         this.N = N;
         this.K = K;
 
@@ -15,7 +18,7 @@ public class BoardGenerator {
         Double SRNd = Math.sqrt(N);
         SRN = SRNd.intValue();
 
-        mat = new int[N][N];
+        mat = new Integer[N][N];
     }
 
     // Sudoku Generator
@@ -40,7 +43,7 @@ public class BoardGenerator {
     }
 
     // Returns false if given 3 x 3 block contains num.
-    boolean unUsedInBox(int rowStart, int colStart, int num) {
+    boolean unUsedInBox(Integer rowStart, Integer colStart, Integer num) {
         for (int i = 0; i < SRN; i++)
             for (int j = 0; j < SRN; j++)
                 if (mat[rowStart + i][colStart + j] == num)
@@ -50,7 +53,7 @@ public class BoardGenerator {
     }
 
     // Fill a 3 x 3 matrix.
-    void fillBox(int row, int col) {
+    void fillBox(Integer row, Integer col) {
         int num;
         for (int i = 0; i < SRN; i++) {
             for (int j = 0; j < SRN; j++) {
@@ -65,7 +68,7 @@ public class BoardGenerator {
     }
 
     // Random generator
-    int randomGenerator(int num) {
+    int randomGenerator(Integer num) {
         return (int) Math.floor((Math.random() * num + 1));
     }
 
@@ -77,7 +80,7 @@ public class BoardGenerator {
     }
 
     // check in the row for existence
-    boolean unUsedInRow(int i, int num) {
+    boolean unUsedInRow(Integer i, Integer num) {
         for (int j = 0; j < N; j++)
             if (mat[i][j] == num)
                 return false;
@@ -85,7 +88,7 @@ public class BoardGenerator {
     }
 
     // check in the row for existence
-    boolean unUsedInCol(int j, int num) {
+    boolean unUsedInCol(Integer j, Integer num) {
         for (int i = 0; i < N; i++)
             if (mat[i][j] == num)
                 return false;
@@ -94,7 +97,7 @@ public class BoardGenerator {
 
     // A recursive function to fill remaining
     // matrix
-    boolean fillRemaining(int i, int j) {
+    boolean fillRemaining(Integer i, Integer j) {
         //  System.out.println(i+" "+j);
         if (j >= N && i < N - 1) {
             i = i + 1;
@@ -147,7 +150,7 @@ public class BoardGenerator {
             //System.out.println(i+" "+j);
             if (mat[i][j] != 0) {
                 count--;
-                mat[i][j] = 0;
+              mat[i][j] = 0;
             }
         }
     }
@@ -162,8 +165,7 @@ public class BoardGenerator {
         System.out.println();
     }
 
-
-    public int[][] getMat() {
+    public Integer[][] getMat() {
         return mat;
     }
 
