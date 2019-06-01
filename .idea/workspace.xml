@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="659bca2d-de37-439b-90a0-69c2d39ae56d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/enums/Difficulties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/enums/Difficulties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sudoku.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sudoku.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="542">
-              <caret line="439" column="10" selection-start-line="439" selection-start-column="10" selection-end-line="439" selection-end-column="10" />
+              <caret line="467" column="10" selection-start-line="467" selection-start-column="10" selection-end-line="467" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -92,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/Board.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="714">
@@ -123,11 +115,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/enums/Difficulties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#165#166#0" expanded="true" />
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#234#235#0" expanded="true" />
+                <element signature="e#265#266#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,8 +143,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/sudoku.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/enums/Difficulties.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/enums/Difficulties.java" />
       </list>
     </option>
   </component>
@@ -330,10 +328,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1170000" />
+    <option name="totallyTimeSpent" value="2031000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
@@ -400,20 +398,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
-          <caret line="439" column="10" selection-start-line="439" selection-start-column="10" selection-end-line="439" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="172" column="14" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
-          <folding>
-            <element signature="e#1721#1722#0" expanded="true" />
-            <element signature="e#1783#1784#0" expanded="true" />
-            <element signature="e#4215#4216#0" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
-          </folding>
+          <caret line="467" column="10" selection-start-line="467" selection-start-column="10" selection-end-line="467" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -436,10 +421,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/enums/Difficulties.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="471">
+          <caret line="172" column="14" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+          <folding>
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -468,6 +459,19 @@
             <element signature="e#1201#1202#0" expanded="true" />
             <element signature="e#1257#1258#0" expanded="true" />
             <element signature="e#1290#1291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/enums/Difficulties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
           </folding>
         </state>
       </provider>
