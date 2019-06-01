@@ -21,7 +21,7 @@ public class MainController {
 
     @FXML
     private void initialize() {
-
+        refreshGui();
     }
 
     private void refreshGui() {
