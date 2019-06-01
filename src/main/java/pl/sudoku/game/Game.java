@@ -17,6 +17,9 @@ public class Game extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
+
+
     }
 
     @Override
@@ -26,7 +29,7 @@ public class Game extends Application {
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sudoku.fxml"));
         primaryStage.setTitle("Sudoku v.0.0.1-SNAPSHOT");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 600, 600));
         primaryStage.show();
     }
 

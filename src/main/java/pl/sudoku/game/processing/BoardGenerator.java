@@ -27,7 +27,7 @@ public class BoardGenerator {
         fillRemaining(0, SRN);
 
         // Remove Randomly K digits to make game
-//        removeKDigits();
+         removeKDigits();
     }
 
     // Fill the diagonal SRN number of SRN x SRN matrices
@@ -137,14 +137,14 @@ public class BoardGenerator {
         while (count != 0) {
             int cellId = randomGenerator(N * N);
 
-            // System.out.println(cellId);
+            //System.out.println(cellId);
             // extract coordinates i  and j
             int i = (cellId / N);
             int j = cellId % 9;
             if (j != 0)
                 j = j - 1;
 
-            // System.out.println(i+" "+j);
+            //System.out.println(i+" "+j);
             if (mat[i][j] != 0) {
                 count--;
                 mat[i][j] = 0;
@@ -153,25 +153,20 @@ public class BoardGenerator {
     }
 
     // Print sudoku
-//    public void printSudoku() {
-//        for (int i = 0; i < N; i++) {
-//            for (int j = 0; j < N; j++)
-//                System.out.print(mat[i][j] + " ");
-//            System.out.println();
-//        }
-//        System.out.println();
-//    }
-//
+    public void printSudoku() {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++)
+                System.out.print(mat[i][j] + " ");
+            System.out.println();
+        }
+        System.out.println();
+    }
+
 
     public int[][] getMat() {
         return mat;
     }
 
     // Driver code
-//    public static void main(String[] args) {
-//        int N = 9, K = 20;
-//        BoardGenerator sudoku = new BoardGenerator(N, K);
-//        sudoku.fillValues();
-//        sudoku.printSudoku();
-//    }
+
 }
