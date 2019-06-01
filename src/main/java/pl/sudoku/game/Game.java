@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import pl.sudoku.game.processing.BoardGenerator;
+
 import java.io.IOException;
 
 public class Game extends Application {
@@ -19,6 +21,15 @@ public class Game extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        int N = 9, K = 20;
+        BoardGenerator sudoku = new BoardGenerator(N, K);
+        sudoku.fillValues();
+        int[][] o1 = sudoku.getMat();
+        sudoku.removeKDigits();
+        int[][] o2 = sudoku.getMat();
+        sudoku.printSudoku();
+
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sudoku.fxml"));
         primaryStage.setTitle("Sudoku v.0.0.1-SNAPSHOT");
         primaryStage.setScene(new Scene(root, 300, 275));
