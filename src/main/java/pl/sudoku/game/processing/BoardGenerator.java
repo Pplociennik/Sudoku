@@ -153,24 +153,25 @@ public class BoardGenerator {
     }
 
     // Print sudoku
-    public void printSudoku() {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++)
-                System.out.print(mat[i][j] + " ");
-            System.out.println();
-        }
-        System.out.println();
-    }
+//    public void printSudoku() {
+//        for (int i = 0; i < N; i++) {
+//            for (int j = 0; j < N; j++)
+//                System.out.print(mat[i][j] + " ");
+//            System.out.println();
+//        }
+//        System.out.println();
+//    }
+//
 
     public int[][] getMat() {
         return mat;
     }
 
     // Driver code
-    public static void main(String[] args) {
-        int N = 9, K = 20;
-        BoardGenerator sudoku = new BoardGenerator(N, K);
-        sudoku.fillValues();
-        sudoku.printSudoku();
-    }
+//    public static void main(String[] args) {
+//        int N = 9, K = 20;
+//        BoardGenerator sudoku = new BoardGenerator(N, K);
+//        sudoku.fillValues();
+//        sudoku.printSudoku();
+//    }
 }

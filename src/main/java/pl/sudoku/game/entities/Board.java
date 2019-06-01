@@ -7,7 +7,6 @@ public class Board {
     private int height;
     private int width;
     private int[][] values;
-    private int[][] resultBoard;
 
     public Board(int[][] values) {
         this.values = values;
@@ -41,14 +40,6 @@ public class Board {
 
     public void setValues(int[][] values) {
         this.values = values;
-    }
-
-    public int[][] getResultBoard() {
-        return resultBoard;
-    }
-
-    public void setResultBoard(int[][] resultBoard) {
-        this.resultBoard = resultBoard;
     }
 
     public int getSpecificValue(int height, int width) {
