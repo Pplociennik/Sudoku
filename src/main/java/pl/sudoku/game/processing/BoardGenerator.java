@@ -1,24 +1,34 @@
 package pl.sudoku.game.processing;
 
-import com.sun.deploy.util.ArrayUtil;
-
 public class BoardGenerator {
 
-  private  Integer [][] mat;
-  private  Integer N; // number of columns/rows.
-  private  Integer SRN; // square root of N
-  private  Integer K; // No. Of missing digits
+    private int[][] mat;
+    private int size; // number of columns/rows.
+    private int SRN; // square root of size
+    private int emptyTilesNo; // No. Of missing digits
+    private static BoardGenerator instance;
 
     // Constructor
-    public BoardGenerator(Integer N, Integer K) {
-        this.N = N;
-        this.K = K;
+    private BoardGenerator() {
 
-        // Compute square root of N
-        Double SRNd = Math.sqrt(N);
+    }
+
+    public static BoardGenerator getInstance() {
+        if (instance == null) {
+            instance = new BoardGenerator();
+        }
+        return instance;
+    }
+
+    public void prepare(Integer size, Integer emptyTilesNo) {
+        this.size = size;
+        this.emptyTilesNo = emptyTilesNo;
+
+        // Compute square root of size
+        Double SRNd = Math.sqrt(size);
         SRN = SRNd.intValue();
 
-        mat = new Integer[N][N];
+        mat = new int[size][size];
     }
 
     // Sudoku Generator
@@ -29,14 +39,14 @@ public class BoardGenerator {
         // Fill remaining blocks
         fillRemaining(0, SRN);
 
-        // Remove Randomly K digits to make game
-         removeKDigits();
+        // Remove Randomly emptyTilesNo digits to make game
+//        removeKDigits();
     }
 
     // Fill the diagonal SRN number of SRN x SRN matrices
     void fillDiagonal() {
 
-        for (int i = 0; i < N; i = i + SRN)
+        for (int i = 0; i < size; i = i + SRN)
 
             // for diagonal box, start coordinates->i==j
             fillBox(i, i);
@@ -58,7 +68,7 @@ public class BoardGenerator {
         for (int i = 0; i < SRN; i++) {
             for (int j = 0; j < SRN; j++) {
                 do {
-                    num = randomGenerator(N);
+                    num = randomGenerator(size);
                 }
                 while (!unUsedInBox(row, col, num));
 
@@ -81,7 +91,7 @@ public class BoardGenerator {
 
     // check in the row for existence
     boolean unUsedInRow(Integer i, Integer num) {
-        for (int j = 0; j < N; j++)
+        for (int j = 0; j < size; j++)
             if (mat[i][j] == num)
                 return false;
         return true;
@@ -89,7 +99,7 @@ public class BoardGenerator {
 
     // check in the row for existence
     boolean unUsedInCol(Integer j, Integer num) {
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < size; i++)
             if (mat[i][j] == num)
                 return false;
         return true;
@@ -99,29 +109,29 @@ public class BoardGenerator {
     // matrix
     boolean fillRemaining(Integer i, Integer j) {
         //  System.out.println(i+" "+j);
-        if (j >= N && i < N - 1) {
+        if (j >= size && i < size - 1) {
             i = i + 1;
             j = 0;
         }
-        if (i >= N && j >= N)
+        if (i >= size && j >= size)
             return true;
 
         if (i < SRN) {
             if (j < SRN)
                 j = SRN;
-        } else if (i < N - SRN) {
+        } else if (i < size - SRN) {
             if (j == (int) (i / SRN) * SRN)
                 j = j + SRN;
         } else {
-            if (j == N - SRN) {
+            if (j == size - SRN) {
                 i = i + 1;
                 j = 0;
-                if (i >= N)
+                if (i >= size)
                     return true;
             }
         }
 
-        for (int num = 1; num <= N; num++) {
+        for (int num = 1; num <= size; num++) {
             if (CheckIfSafe(i, j, num)) {
                 mat[i][j] = num;
                 if (fillRemaining(i, j + 1))
@@ -133,16 +143,16 @@ public class BoardGenerator {
         return false;
     }
 
-    // Remove the K no. of digits to
+    // Remove the emptyTilesNo no. of digits to
     // complete game
     public void removeKDigits() {
-        int count = K;
+        int count = emptyTilesNo;
         while (count != 0) {
-            int cellId = randomGenerator(N * N);
+            int cellId = randomGenerator(size * size);
 
             //System.out.println(cellId);
             // extract coordinates i  and j
-            int i = (cellId / N);
+            int i = (cellId / size);
             int j = cellId % 9;
             if (j != 0)
                 j = j - 1;
@@ -150,25 +160,14 @@ public class BoardGenerator {
             //System.out.println(i+" "+j);
             if (mat[i][j] != 0) {
                 count--;
-              mat[i][j] = 0;
+                mat[i][j] = 0;
             }
         }
     }
 
-    // Print sudoku
-    public void printSudoku() {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++)
-                System.out.print(mat[i][j] + " ");
-            System.out.println();
-        }
-        System.out.println();
-    }
 
-    public Integer[][] getMat() {
+    public int[][] getMat() {
         return mat;
     }
-
-    // Driver code
 
 }

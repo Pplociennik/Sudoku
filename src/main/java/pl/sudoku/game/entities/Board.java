@@ -4,35 +4,16 @@ import java.util.Arrays;
 
 public class Board {
 
-    private int height;
-    private int width;
     private int[][] values;
 
     public Board(int[][] values) {
         this.values = values;
     }
 
-    public Board(int height, int width) {
-        this.height = height;
-        this.width = width;
-        this.values = new int[height][width];
+    public Board(int size) {
+        this.values = new int[size][size];
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
 
     public int[][] getValues() {
         return values;

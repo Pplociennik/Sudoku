@@ -8,7 +8,8 @@ import javafx.scene.layout.GridPane;
 import pl.sudoku.game.boardGui.BoardTile;
 import pl.sudoku.game.boardGui.DefaultBoardTileFactory;
 import pl.sudoku.game.boardGui.ValuesInBoardTile;
-import pl.sudoku.game.processing.BoardGenerator;
+import pl.sudoku.game.entities.Board;
+import pl.sudoku.game.processing.BoardEngine;
 
 public class MainController {
 
@@ -17,29 +18,28 @@ public class MainController {
     @FXML
     Button passButton;
 
+    private BoardEngine boardEngine = new BoardEngine();
+    private Board aGameBoard = new Board(9);
+    private Board aSolutionBoard = new Board(9);
+
     public MainController() {
 
     }
 
     @FXML
     private void initialize() {
-
-
-
+        boardEngine.generateNewMediumBoard(aGameBoard, aSolutionBoard);
         refreshGui();
     }
 
     private void refreshGui() {
-        int N = 9, K = 20;
-        BoardGenerator sudoku = new BoardGenerator(N, K);
-        sudoku.fillValues();
         for (int x = 0; x < 9; x++) {
-            for (int y = 0; y <9; y++) {
+            for (int y = 0; y < 9; y++) {
 
 
                 DefaultBoardTileFactory tileFactory = new DefaultBoardTileFactory();
-                if(sudoku.getMat()[x][y] != 0) {
-                    tileFactory = new ValuesInBoardTile(tileFactory, sudoku, x, y);
+                if (aGameBoard.getSpecificValue(x, y) != 0) {
+                    tileFactory = new ValuesInBoardTile(tileFactory, aGameBoard, x, y);
                 }
                 BoardTile boardTile = tileFactory.prepareTile(x, y);
 
