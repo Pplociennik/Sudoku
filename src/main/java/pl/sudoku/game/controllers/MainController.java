@@ -7,7 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import pl.sudoku.game.boardGui.BoardTile;
 import pl.sudoku.game.boardGui.DefaultBoardTileFactory;
-import pl.sudoku.game.boardGui.ValuesInBoardTile;
+import pl.sudoku.game.boardGui.EmptyBoardTileFactory;
+import pl.sudoku.game.boardGui.NotEmptyBoardTileFactory;
 import pl.sudoku.game.entities.Board;
 import pl.sudoku.game.processing.BoardEngine;
 
@@ -32,14 +33,16 @@ public class MainController {
         refreshGui();
     }
 
-    private void refreshGui() {
+    public void refreshGui() {
         for (int x = 0; x < 9; x++) {
             for (int y = 0; y < 9; y++) {
 
 
                 DefaultBoardTileFactory tileFactory = new DefaultBoardTileFactory();
                 if (aGameBoard.getSpecificValue(x, y) != 0) {
-                    tileFactory = new ValuesInBoardTile(tileFactory, aGameBoard, x, y);
+                    tileFactory = new NotEmptyBoardTileFactory(tileFactory, aGameBoard, x, y);
+                } else {
+                    tileFactory = new EmptyBoardTileFactory(tileFactory, aGameBoard, x, y, boardEngine, this);
                 }
                 BoardTile boardTile = tileFactory.prepareTile(x, y);
 
