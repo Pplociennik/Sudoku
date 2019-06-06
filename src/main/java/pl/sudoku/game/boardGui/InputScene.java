@@ -48,14 +48,17 @@ public class InputScene extends Scene {
         insert.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
             try {
                 int value = Integer.parseInt(inputField.getText());
+
+                if (value < 1 || value > 9) {
+                    inputText.setTextFill(Color.RED);
+                    inputText.setText("Podaj 1 < cyfrę < 9 !");
+                    return;
+                }
+
                 aGameBoard.setSpecificValue(aX, aY, value);
                 controller.refreshGui();
                 Stage toClose = (Stage) getWindow();
                 toClose.close();
-                if (value < 1 || value > 9) {
-                    inputText.setTextFill(Color.RED);
-                    inputText.setText("Podaj 1 < cyfrę < 9 !");
-                }
             } catch (NumberFormatException n) {
                 inputText.setTextFill(Color.RED);
                 inputText.setText("Zły typ!");
