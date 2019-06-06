@@ -28,10 +28,6 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
     public BoardTile prepareTile(int aX, int aY) {
         BoardTile boardTile = decorated.prepareTile(aX, aY);
         BorderPane valuesPane = new BorderPane();
-//        boardValues.setFont(Font.font("Comic Sans", 30));
-//        boardValues.setStyle("-fx-font-weight: bold");
-//        valuesPane.setCenter(boardValues);
-//        valuesPane.setAlignment(boardValues, Pos.CENTER);
         boardTile.getChildren().add(valuesPane);
         boardTile.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
             Stage inputStage = new Stage();

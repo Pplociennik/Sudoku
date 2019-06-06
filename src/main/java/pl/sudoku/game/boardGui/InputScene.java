@@ -29,8 +29,6 @@ public class InputScene extends Scene {
 
     private void prepareInputText() {
         inputText = new Label("Podaj liczbę z zakresu 1 - 9:");
-//        inputText.setLayoutX(90);
-//        inputText.setLayoutY(300);
         inputText.setAlignment(Pos.TOP_CENTER);
         inputText.setPrefSize(300, 90);
     }
@@ -38,8 +36,6 @@ public class InputScene extends Scene {
     private void prepareInputField() {
         inputField = new TextField();
         inputField.setAlignment(Pos.CENTER);
-//        inputField.setLayoutY(300);
-//        inputField.setLayoutX(20);
     }
 
     private void prepareInsertButton(Board aGameBoard, Integer aX, Integer aY) {
