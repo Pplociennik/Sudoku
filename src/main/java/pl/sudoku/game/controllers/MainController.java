@@ -34,6 +34,7 @@ public class MainController {
     }
 
     public void refreshGui() {
+        gridMap.getChildren().removeAll();
         for (int x = 0; x < 9; x++) {
             for (int y = 0; y < 9; y++) {
 

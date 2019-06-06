@@ -7,6 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import pl.sudoku.game.controllers.MainController;
 import pl.sudoku.game.entities.Board;
 
 public class InputScene extends Scene {
@@ -15,12 +17,12 @@ public class InputScene extends Scene {
     private TextField inputField;
     private Button insert;
 
-    public InputScene(double width, double height, Board aGameBoard, Integer aX, Integer aY) {
+    public InputScene(double width, double height, Board aGameBoard, Integer aX, Integer aY, MainController controller) {
         super(new VBox(), width, height);
 
         prepareInputText();
         prepareInputField();
-        prepareInsertButton(aGameBoard, aX, aY);
+        prepareInsertButton(aGameBoard, aX, aY, controller);
 
         VBox vBox = new VBox();
         vBox.getChildren().addAll(inputText, inputField, insert);
@@ -38,7 +40,7 @@ public class InputScene extends Scene {
         inputField.setAlignment(Pos.CENTER);
     }
 
-    private void prepareInsertButton(Board aGameBoard, Integer aX, Integer aY) {
+    private void prepareInsertButton(Board aGameBoard, Integer aX, Integer aY, MainController controller) {
         insert = new Button("Wstaw");
         insert.setAlignment(Pos.BOTTOM_CENTER);
 //
@@ -47,7 +49,9 @@ public class InputScene extends Scene {
             try {
                 int value = Integer.parseInt(inputField.getText());
                 aGameBoard.setSpecificValue(aX, aY, value);
-
+                controller.refreshGui();
+                Stage toClose = (Stage) getWindow();
+                toClose.close();
                 if (value < 1 || value > 9) {
                     inputText.setTextFill(Color.RED);
                     inputText.setText("Podaj 1 < cyfrę < 9 !");

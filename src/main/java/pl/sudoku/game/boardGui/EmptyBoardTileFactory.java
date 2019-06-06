@@ -32,10 +32,9 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
         boardTile.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
             Stage inputStage = new Stage();
             inputStage.setTitle("Wprowadż wartość");
-            Scene inputScene = new InputScene(200, 100, aGameBoard, aX, aY);
+            Scene inputScene = new InputScene(200, 100, aGameBoard, aX, aY, controller);
             inputStage.setScene(inputScene);
             inputStage.show();
-            controller.refreshGui();
         });
         return boardTile;
     }
