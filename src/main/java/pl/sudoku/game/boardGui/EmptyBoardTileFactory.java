@@ -2,6 +2,7 @@ package pl.sudoku.game.boardGui;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import pl.sudoku.game.controllers.MainController;
 import pl.sudoku.game.entities.Board;
@@ -27,6 +28,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
     @Override
     public BoardTile prepareTile(int aX, int aY) {
         BoardTile boardTile = decorated.prepareTile(aX, aY);
+        boardTile.getRect().setFill(Color.GRAY);
         BorderPane valuesPane = new BorderPane();
         boardTile.getChildren().add(valuesPane);
         boardTile.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
