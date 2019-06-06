@@ -6,19 +6,6 @@ public class BoardGenerator {
     private int size; // number of columns/rows.
     private int SRN; // square root of size
     private int emptyTilesNo; // No. Of missing digits
-    private static BoardGenerator instance;
-
-    // Constructor
-    private BoardGenerator() {
-
-    }
-
-    public static BoardGenerator getInstance() {
-        if (instance == null) {
-            instance = new BoardGenerator();
-        }
-        return instance;
-    }
 
     public void prepare(Integer size, Integer emptyTilesNo) {
         this.size = size;

@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class BoardEngine {
 
-    private BoardGenerator boardGenerator = BoardGenerator.getInstance();
+    private BoardGenerator boardGenerator = new BoardGenerator();
 
     private void generateBoardAndSolution(Board aGameBoard, Board aSolutionBoard, Integer aBoardSize, Difficulties aDifficulty) {
         boardGenerator.prepare(aBoardSize, aDifficulty.getDiffCode());
