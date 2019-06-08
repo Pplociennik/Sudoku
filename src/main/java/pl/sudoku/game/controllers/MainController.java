@@ -20,6 +20,7 @@ public class MainController {
     Button passButton;
 
     private BoardEngine boardEngine = new BoardEngine();
+    private Board aBaseBoard = new Board(9);
     private Board aGameBoard = new Board(9);
     private Board aSolutionBoard = new Board(9);
 
@@ -30,6 +31,12 @@ public class MainController {
     @FXML
     private void initialize() {
         boardEngine.generateNewMediumBoard(aGameBoard, aSolutionBoard);
+        int[][] gameValues = aGameBoard.getValues();
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                aBaseBoard.setSpecificValue(i, j, gameValues[i][j]);
+            }
+        }
         refreshGui();
     }
 
@@ -40,7 +47,7 @@ public class MainController {
 
 
                 DefaultBoardTileFactory tileFactory = new DefaultBoardTileFactory();
-                if (aGameBoard.getSpecificValue(x, y) != 0) {
+                if (aBaseBoard.getSpecificValue(x, y) != 0) {
                     tileFactory = new NotEmptyBoardTileFactory(tileFactory, aGameBoard, x, y);
                 } else {
                     tileFactory = new EmptyBoardTileFactory(tileFactory, aGameBoard, x, y, boardEngine, this);
