@@ -12,7 +12,7 @@ import pl.sudoku.game.boardGui.NotEmptyBoardTileFactory;
 import pl.sudoku.game.entities.Board;
 import pl.sudoku.game.processing.BoardEngine;
 
-public class MainController {
+public class BoardController {
 
     @FXML
     GridPane gridMap;
@@ -24,7 +24,7 @@ public class MainController {
     private Board aGameBoard = new Board(9);
     private Board aSolutionBoard = new Board(9);
 
-    public MainController() {
+    public BoardController() {
 
     }
 

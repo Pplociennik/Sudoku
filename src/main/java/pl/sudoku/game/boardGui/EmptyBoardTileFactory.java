@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import pl.sudoku.game.controllers.MainController;
+import pl.sudoku.game.controllers.BoardController;
 import pl.sudoku.game.entities.Board;
 import pl.sudoku.game.processing.BoardEngine;
 
@@ -18,10 +18,10 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
     private Board aGameBoard;
     private final BoardEngine engine;
     private Label boardValues;
-    private final MainController controller;
+    private final BoardController controller;
     private Paint color;
 
-    public EmptyBoardTileFactory(DefaultBoardTileFactory aTileFactory, Board aGameBoard, int xPosition, int yPosition, BoardEngine engine, MainController controller) {
+    public EmptyBoardTileFactory(DefaultBoardTileFactory aTileFactory, Board aGameBoard, int xPosition, int yPosition, BoardEngine engine, BoardController controller) {
         super();
         decorated = aTileFactory;
         this.aGameBoard = aGameBoard;
@@ -62,6 +62,21 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
             inputStage.setScene(inputScene);
             inputStage.show();
         });
-    }
 
+//        boardTile.addEventHandler(MouseEvent.MOUSE_CLICKED, (e) -> {
+//            boardTile.getRect().setFill(Color.YELLOW);
+//            color = Color.YELLOW;
+//
+////            boardTile.addEventHandler(KeyEvent.KEY_TYPED, (k) -> {
+////                if (Integer.parseInt(k.getText()) > 0 && Integer.parseInt(k.getText()) < 10)
+////                    aGameBoard.setSpecificValue(aX, aY, Integer.parseInt(k.getText()));
+////            });
+//
+//
+//            boardTile.getRect().setFill(Color.ORCHID);
+//            color = Color.ORCHID;
+//        });
+//    }
+
+    }
 }
