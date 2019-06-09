@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="659bca2d-de37-439b-90a0-69c2d39ae56d" name="Default" comment="Added colors to board">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/BoardTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/BoardTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/DefaultBoardTileFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/DefaultBoardTileFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTileFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTileFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/InputScene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/NotEmptyBoardTileFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/NotEmptyBoardTileFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,22 +28,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
+          <entry key="fxml" value="6" />
+          <entry key="java" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="14" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1037" />
+          <entry key="fxml" value="19" />
+          <entry key="java" value="1419" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1037" />
+          <entry key="JAVA" value="1419" />
+          <entry key="XML" value="19" />
         </counts>
       </usages-collector>
     </session>
@@ -56,8 +57,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1560111258052" expanded="true" signature="0:797" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,17 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/controllers/BoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="50" column="62" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/NotEmptyBoardTileFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            <state relative-caret-position="337">
+              <caret line="40" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,18 +82,63 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
+            <state relative-caret-position="17">
               <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/controllers/StartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/sudoku.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="70" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="70" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/NotEmptyBoardTileFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/start.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/BoardTile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="187">
+              <caret line="11" column="40" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="40" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#581#582#0" expanded="true" />
                 <element signature="e#613#614#0" expanded="true" />
                 <element signature="e#554#555#0" expanded="true" />
@@ -108,31 +149,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/DefaultBoardTileFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTileFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -162,6 +182,7 @@
       <find>setEvents</find>
       <find>prepareTile</find>
       <find>setStyle</find>
+      <find>gridMap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,7 +201,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/ValueTileFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTile.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyTileFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java" />
         <option value="$PROJECT_DIR$/src/main/resources/intInput.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/InputStage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardEngine.java" />
@@ -189,9 +209,13 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/InputScene.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/KeyboardListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/DefaultBoardTileFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/BoardTile.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/NotEmptyBoardTileFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTileFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/BoardTile.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/start.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/Start.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sudoku/game/controllers/StartController.java" />
       </list>
     </option>
   </component>
@@ -233,32 +257,6 @@
             <path>
               <item name="Sudoku" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sudoku" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Sudoku" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sudoku" type="b2602c69:ProjectViewProjectNode" />
@@ -339,8 +337,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560105234478" />
-    <property name="last_opened_file_path" value="$USER_HOME$/WatchOutGame" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560111436513" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/sudoku.fxml" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -354,7 +352,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Game">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.sudoku.game.Game" />
       <module name="Sudoku" />
@@ -368,9 +366,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.sudoku.game.Start" />
+      <module name="Sudoku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sudoku.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Game" />
+      <item itemvalue="Application.Start" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Game" />
+        <item itemvalue="Application.Start" />
       </list>
     </recent_temporary>
   </component>
@@ -440,7 +456,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24147122" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24147122" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -449,7 +465,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3275488" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3275488" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3275488" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -513,14 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sudoku.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/enums/Difficulties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -529,34 +537,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/InputScene.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1594">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -581,11 +561,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTileFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/entities/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/NotEmptyBoardTileFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/BoardTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="40" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#581#582#0" expanded="true" />
             <element signature="e#613#614#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
@@ -594,27 +602,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/controllers/BoardController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sudoku.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="50" column="62" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="62" />
+        <state relative-caret-position="187">
+          <caret line="11" column="70" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="70" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/NotEmptyBoardTileFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/start.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/Start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        <state relative-caret-position="352">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="25" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/boardGui/EmptyBoardTileFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
+        <state relative-caret-position="17">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/processing/BoardGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1594">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/controllers/BoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1560111258052" expanded="true" signature="0:797" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sudoku/game/controllers/StartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
