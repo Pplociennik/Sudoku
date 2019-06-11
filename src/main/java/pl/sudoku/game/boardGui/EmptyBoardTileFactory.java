@@ -65,7 +65,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
             try {
                 int value = Integer.parseInt(character);
 
-                if (Integer.parseInt(boardTile.getTextField().getText()) <= 0 || Integer.parseInt(boardTile.getTextField().getText()) > 9) {
+                if (value <= 0 || value > 9) {
                     controller.throwInputError("Podaj 1 < liczbę < 10 !");
                     boardTile.getTextField().setText("");
                     return;
