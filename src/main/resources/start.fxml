@@ -3,9 +3,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sudoku.game.controllers.StartController">
+<AnchorPane fx:id="StartPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sudoku.game.controllers.LevelController">
    <children>
-      <Button id="NewGame" layoutX="196.0" layoutY="45.0" mnemonicParsing="false" onAction="#StartNewGame" prefHeight="57.0" prefWidth="208.0" text="New Game" />
+      <Button fx:id="NewGame" layoutX="196.0" layoutY="45.0" mnemonicParsing="false" onAction="#StartNewGame" prefHeight="57.0" prefWidth="208.0" text="New Game" />
       <Button layoutX="196.0" layoutY="125.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="208.0" text="Scoreboard" />
       <Button layoutX="196.0" layoutY="200.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="208.0" text="Exit" />
    </children>

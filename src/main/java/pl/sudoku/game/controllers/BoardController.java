@@ -1,6 +1,5 @@
 package pl.sudoku.game.controllers;
 
-//import com.google.common.collect.Range;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
