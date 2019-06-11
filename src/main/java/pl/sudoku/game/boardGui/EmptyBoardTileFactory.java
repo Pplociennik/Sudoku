@@ -14,6 +14,7 @@ import pl.sudoku.game.controllers.BoardController;
 import pl.sudoku.game.entities.Board;
 import pl.sudoku.game.processing.BoardEngine;
 
+import java.awt.*;
 import java.awt.event.KeyListener;
 
 public class EmptyBoardTileFactory extends DefaultBoardTileFactory  {
@@ -57,19 +58,24 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory  {
     }
 
     private void setEvents(BoardTile boardTile, int aX, int aY) {
-//        boardTile.addEventHandler(MouseEvent.MOUSE_ENTERED_TARGET, (e) -> {
-//            boardTile.getTextField().setStyle("-fx-background-color: yellow");
-//        });
-//        boardTile.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, (e) -> {
-//            boardTile.getTextField().setStyle("-fx-background-color: green");
-//        });
+        boardTile.addEventHandler(MouseEvent.MOUSE_ENTERED_TARGET, (e) -> {
+            boardTile.getTextField().setStyle("-fx-background-color: yellow");
+        });
+        boardTile.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, (e) -> {
+            boardTile.getTextField().setStyle("-fx-background-color: white");
+            boardTile.getTextField().setStyle("-fx-stroke: white");
+        });
         boardTile.getTextField().addEventHandler(KeyEvent.KEY_TYPED, (e) -> {
-                  System.out.println(e.getCharacter());
-                  /** TODO
-                   *  CHECKING IF e exist in 3x3 row or column
-                   *
-                   *
-                   * **/
+                  String character = e.getCharacter();
+                  Point coords = boardTile.getPosition();
+                    try {
+                        if (Integer.parseInt(character) <= 0 || Integer.parseInt(character) > 9) {
+
+                        }
+                        aGameBoard.setSpecificValue(coords.x, coords.y, Integer.parseInt(character));
+                    }catch(NumberFormatException ex) {
+
+                    }
                 });
 //        boardTile.addEventHandler(MouseEvent.MOUSE_CLICKED, (e) -> {
 //            boardTile.getRect().setFill(Color.YELLOW);
