@@ -17,17 +17,17 @@ public class BoardEngine {
         aGameBoard.setValues(boardGenerator.getMat());
     }
 
-    public void generateNewEasyBoard(Board aGameBoard, Board aSolutionBoard) {
-        generateBoardAndSolution(aGameBoard, aSolutionBoard, 9, Difficulties.EASY);
-    }
-
-    public void generateNewMediumBoard(Board aGameBoard, Board aSolutionBoard) {
-        generateBoardAndSolution(aGameBoard, aSolutionBoard, 9, Difficulties.MEDIUM);
-    }
-
-    public void generateNewHardBoard(Board aGameBoard, Board aSolutionBoard) {
-        generateBoardAndSolution(aGameBoard, aSolutionBoard, 9, Difficulties.HARD);
-    }
+//    public void generateNewEasyBoard(Board aGameBoard, Board aSolutionBoard) {
+//        generateBoardAndSolution(aGameBoard, aSolutionBoard, 9, Difficulties.EASY);
+//    }
+//
+//    public void generateNewMediumBoard(Board aGameBoard, Board aSolutionBoard) {
+//        generateBoardAndSolution(aGameBoard, aSolutionBoard, 9, Difficulties.MEDIUM);
+//    }
+//
+//    public void generateNewHardBoard(Board aGameBoard, Board aSolutionBoard) {
+//        generateBoardAndSolution(aGameBoard, aSolutionBoard, 9, Difficulties.HARD);
+//    }
 
     public boolean checkIfSolutionCorrect(Board aGameBoard, Board aSolutionBoard) {
         return Arrays.equals(aGameBoard.getValues(), aSolutionBoard.getValues());
@@ -35,5 +35,9 @@ public class BoardEngine {
 
     public void setValueInSpecificLocation(Board aGameBoard, int height, int width, int value) {
         aGameBoard.setSpecificValue(height, width, value);
+    }
+
+    public void generateNewBoard(Board aGameBoard, Board aSolutionBoard, Difficulties diff) {
+        generateBoardAndSolution(aGameBoard, aSolutionBoard, 9, diff);
     }
 }
