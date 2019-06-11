@@ -4,11 +4,9 @@ package pl.sudoku.game.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
-
 import javafx.stage.Stage;
 
 
@@ -21,60 +19,37 @@ public class StartController {
     @FXML
     private Button HardGame;
 
+    BoardController boardController = new BoardController();
+
+    private void switchSceneToBoard(ActionEvent event) {
+        try {
+
+            Parent gamePane = FXMLLoader.load(getClass().getResource("/sudoku.fxml"));
+            Scene gameScene = new Scene(gamePane);
+
+            Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            window.setScene(gameScene);
+
+            window.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     void EasyGame(ActionEvent event) {
-
-        try {
-            Stage stage = new Stage();
-            stage.setTitle("Sudoku v.0.0.1-SNAPSHOT");
-            AnchorPane myPane = null;
-            myPane = FXMLLoader.load(getClass().getResource("/sudoku.fxml"));
-            Scene scene = new Scene(myPane,750,600);
-            stage.setScene(scene);
-
-//            prevStage.close();
-
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        switchSceneToBoard(event);
     }
+
     @FXML
-    void MediumGame (ActionEvent event) {
-
-        try {
-            Stage stage = new Stage();
-            stage.setTitle("Sudoku v.0.0.1-SNAPSHOT");
-            AnchorPane myPane = null;
-            myPane = FXMLLoader.load(getClass().getResource("/sudoku.fxml"));
-            Scene scene = new Scene(myPane,750,600);
-            stage.setScene(scene);
-
-//            prevStage.close();
-
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    void MediumGame(ActionEvent event) {
+        switchSceneToBoard(event);
     }
+
     @FXML
-    void HardGame (ActionEvent event) {
-
-        try {
-            Stage stage = new Stage();
-            stage.setTitle("Sudoku v.0.0.1-SNAPSHOT");
-            AnchorPane myPane = null;
-            myPane = FXMLLoader.load(getClass().getResource("/sudoku.fxml"));
-            Scene scene = new Scene(myPane,750,600);
-            stage.setScene(scene);
-
-//            prevStage.close();
-
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    void HardGame(ActionEvent event) {
+        switchSceneToBoard(event);
     }
 
 

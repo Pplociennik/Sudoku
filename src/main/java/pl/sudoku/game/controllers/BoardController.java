@@ -36,14 +36,7 @@ public class BoardController {
 
     @FXML
     private void initialize() {
-        boardEngine.generateNewBoard(aGameBoard, aSolutionBoard, diff);
-        int[][] gameValues = aGameBoard.getValues();
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                aBaseBoard.setSpecificValue(i, j, gameValues[i][j]);
-            }
-        }
-        refreshGui();
+        startNewGame();
     }
 
     public void setDifficulty(Difficulties diff) {
@@ -53,6 +46,17 @@ public class BoardController {
     public void throwInputError(String text) {
         checkErrorLabel.setText(text);
         checkErrorLabel.setTextFill(Color.RED);
+    }
+
+    public void startNewGame() {
+        boardEngine.generateNewBoard(aGameBoard, aSolutionBoard, diff);
+        int[][] gameValues = aGameBoard.getValues();
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                aBaseBoard.setSpecificValue(i, j, gameValues[i][j]);
+            }
+        }
+        refreshGui();
     }
 
     public void refreshGui() {
