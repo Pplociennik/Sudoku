@@ -25,7 +25,7 @@ public class NotEmptyBoardTileFactory extends DefaultBoardTileFactory {
     @Override
     public BoardTile prepareTile(int aX, int aY) {
         BoardTile boardTile = decorated.prepareTile(aX, aY);
-        boardTile.getTextField().setStyle("-fx-background-color: gray");
+        boardTile.getTextField().setStyle("-fx-background-color: gray; -fx-border-color: black");
         BorderPane valuesPane = new BorderPane();
         boardValues.setFont(Font.font("Comic Sans", 30));
         boardValues.setStyle("-fx-font-weight: bold");

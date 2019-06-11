@@ -39,6 +39,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory  {
     public BoardTile prepareTile(int aX, int aY) {
 
         BoardTile boardTile = decorated.prepareTile(aX, aY);
+        boardTile.getTextField().setStyle("-fx-border-color: black");
         color = Color.GRAY;
         BorderPane valuesPane = new BorderPane();
         if (Integer.parseInt(boardValues.getText()) != 0) {
@@ -63,7 +64,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory  {
         });
         boardTile.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, (e) -> {
             boardTile.getTextField().setStyle("-fx-background-color: white");
-            boardTile.getTextField().setStyle("-fx-stroke: white");
+            boardTile.getTextField().setStyle("-fx-border-color: black");
         });
         boardTile.getTextField().addEventHandler(KeyEvent.KEY_TYPED, (e) -> {
                   String character = e.getCharacter();
