@@ -1,7 +1,6 @@
 package pl.sudoku.game.boardGui;
 
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -58,7 +57,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
         boardTile.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, (e) -> {
             boardTile.getTextField().setStyle("-fx-background-color: white");
             boardTile.getTextField().setStyle("-fx-border-color: black");
-            controller.throwInputError("");
+            controller.throwError("");
         });
         boardTile.getTextField().addEventHandler(KeyEvent.KEY_TYPED, (e) -> {
             String character = e.getCharacter();
@@ -66,7 +65,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
                 int value = Integer.parseInt(character);
 
                 if (value <= 0 || value > 9) {
-                    controller.throwInputError("Podaj 1 < liczbę < 10 !");
+                    controller.throwError("Podaj 1 < liczbę < 10 !");
                     boardTile.getTextField().setText("");
                     return;
                 }
@@ -74,7 +73,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
                 controller.refreshGui();
                 System.out.println(character);
             } catch (NumberFormatException ex) {
-                controller.throwInputError("Zły format!");
+                controller.throwError("Zły format!");
             }
         });
 //        boardTile.addEventHandler(MouseEvent.MOUSE_CLICKED, (e) -> {

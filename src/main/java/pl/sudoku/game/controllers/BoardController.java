@@ -35,6 +35,17 @@ public class BoardController {
     }
 
     @FXML
+    private void checkSolution() {
+        if (boardEngine.checkIfSolutionCorrect(aGameBoard, aSolutionBoard)) {
+            checkErrorLabel.setStyle("-fx-text-fill: green");
+            checkErrorLabel.setText("SUCCESS!");
+        }
+        else {
+            throwError("WRONG!");
+        }
+    }
+
+    @FXML
     private void initialize() {
         startNewGame();
     }
@@ -43,7 +54,7 @@ public class BoardController {
         this.diff = diff;
     }
 
-    public void throwInputError(String text) {
+    public void throwError(String text) {
         checkErrorLabel.setText(text);
         checkErrorLabel.setTextFill(Color.RED);
     }

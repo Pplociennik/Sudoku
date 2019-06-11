@@ -10,7 +10,7 @@
 
         <GridPane fx:id="gridMap" BorderPane.alignment="CENTER">
         </GridPane>
-   <Button fx:id="checkButton" layoutX="566.0" layoutY="54.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="148.0" text="Check" />
+   <Button fx:id="checkButton" layoutX="566.0" layoutY="54.0" mnemonicParsing="false" onAction="#checkSolution" prefHeight="54.0" prefWidth="148.0" text="Check" />
    <Label fx:id="checkErrorLabel" layoutX="566.0" layoutY="130.0" prefHeight="54.0" prefWidth="148.0" />
 
 </AnchorPane>

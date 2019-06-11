@@ -14,7 +14,11 @@ public class BoardEngine {
         boardGenerator.fillValues();
         aSolutionBoard.setValues(boardGenerator.getMat());
         boardGenerator.removeKDigits();
-        aGameBoard.setValues(boardGenerator.getMat());
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                aGameBoard.setSpecificValue(i, j, boardGenerator.getMat()[i][j]);
+            }
+        }
     }
 
 //    public void generateNewEasyBoard(Board aGameBoard, Board aSolutionBoard) {
