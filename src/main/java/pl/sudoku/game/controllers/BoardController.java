@@ -39,6 +39,8 @@ public class BoardController {
     private Button submitNameButton;
     @FXML
 
+    private SceneSwitcher sceneSwitcher = new SceneSwitcher();
+
     private BoardEngine boardEngine = new BoardEngine();
     private Board aBaseBoard = new Board(9);
     private Board aGameBoard = new Board(9);
@@ -97,13 +99,14 @@ public class BoardController {
     }
 
     @FXML
-    private void savePlayerResult() {
+    private void savePlayerResult(ActionEvent event) {
         Result result = new Result();
         result.setName(nameTextField.getText());
-        result.setDate(new Date());
+        result.setDate(new Date().toString());
         result.setPoints(calculator.countPlayerPoints());
 
         databaseController.sendResult(result);
+        sceneSwitcher.switchScene(event, SceneSwitcher.TOP_LIST_SCENE, Difficulties.MEDIUM);
     }
 
     private boolean hasEmpty() {

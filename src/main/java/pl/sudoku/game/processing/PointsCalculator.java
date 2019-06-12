@@ -21,6 +21,7 @@ public class PointsCalculator {
     }
 
     public long countPlayerPoints() {
-        return (endTime - startTime) * (1 - diff.getDiffCode() / 100);
+        long difference = endTime - startTime;
+        return ((10000000) - (difference)) * (1 - diff.getDiffCode() / 100);
     }
 }

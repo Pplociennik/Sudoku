@@ -1,12 +1,9 @@
 package pl.sudoku.game.database.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.Date;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "toplist")
 public class Result {
 
     @Id
@@ -14,7 +11,7 @@ public class Result {
     private Integer id;
     private String name;
     private long points;
-    private Date date;
+    private String date;
 
     public Integer getId() {
         return id;
@@ -36,11 +33,15 @@ public class Result {
         this.points = points;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
+    }
+
+    public String toString() {
+        return "Name: " + name + "      Points: " + points + "      Date: " + date + "\n";
     }
 }

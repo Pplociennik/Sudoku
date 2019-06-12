@@ -43,6 +43,11 @@ public class LevelController {
 
     }
 
+    @FXML
+    private void showHighScores(ActionEvent event) {
+        new SceneSwitcher().switchScene(event, SceneSwitcher.TOP_LIST_SCENE, Difficulties.MEDIUM);
+    }
+
 
     @FXML
     private void exitGame() {

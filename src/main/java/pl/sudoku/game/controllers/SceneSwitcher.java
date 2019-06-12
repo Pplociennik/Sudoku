@@ -13,6 +13,7 @@ public class SceneSwitcher {
     public static final String MAIN_MENU_SCENE = "/start.fxml";
     public static final String TUTORIAL_SCENE = "/tutorial.fxml";
     public static final String DIFFICULTIES_SCENE = "/levels.fxml";
+    public static final String TOP_LIST_SCENE = "/toplist.fxml";
 
     public void switchScene(ActionEvent event, String source, Difficulties diff) {
         try {

@@ -23,7 +23,7 @@ public class Game extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Sudoku v.0.4.5-SNAPSHOT");
+        primaryStage.setTitle("Sudoku v.1.0.0");
 
         Pane root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("start.fxml")));
 
