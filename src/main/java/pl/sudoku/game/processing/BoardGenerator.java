@@ -140,9 +140,11 @@ public class BoardGenerator {
             //System.out.println(cellId);
             // extract coordinates i  and j
             int i = (cellId / size);
+            if (i > 1)
+                i--;
             int j = cellId % 9;
-            if (j != 0)
-                j = j - 1;
+            if (j > 1)
+                j--;
 
             //System.out.println(i+" "+j);
             if (mat[i][j] != 0) {
