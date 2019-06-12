@@ -3,11 +3,7 @@ package pl.sudoku.game.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 
 
 public class StartController {
@@ -22,18 +18,8 @@ public class StartController {
     BoardController boardController = new BoardController();
 
     private void switchSceneToBoard(ActionEvent event) {
-        try {
+        new SceneSwitcher().switchScene(event, SceneSwitcher.BOARD_SCENE);
 
-            Parent gamePane = FXMLLoader.load(getClass().getResource("/sudoku.fxml"));
-            Scene gameScene = new Scene(gamePane);
-
-            Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            window.setScene(gameScene);
-
-            window.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
 

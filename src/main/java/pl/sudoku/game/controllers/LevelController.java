@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class LevelController {
 
-    private BoardController boardController = new BoardController();
+    private BoardController boardController;
 
     @FXML
     private Button StartNewGame;
@@ -34,5 +34,17 @@ public class LevelController {
     @FXML
     void StartNewGame(ActionEvent event) {
         switchSceneToLevels(event);
+    }
+
+    @FXML
+    private void showTutorial(ActionEvent event) {
+        new SceneSwitcher().switchScene(event, SceneSwitcher.TUTORIAL_SCENE);
+
+    }
+
+
+    @FXML
+    private void exitGame() {
+        System.exit(0);
     }
 }

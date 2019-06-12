@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sudoku.game.controllers.TutorialController">
+   <children>
+      <TextArea fx:id="tutorialText" editable="false" layoutX="37.0" layoutY="14.0" prefHeight="200.0" prefWidth="526.0" text="&#10;&#10;Your goal is to set 1-9 numbers that there are no two same &#10;numbers in a line or in a column.&#10;Also, each of the 1-9 numbers has to be contained&#10;in one big 3x3 square.&#10;&#10;Have fun,&#10;We wish you great results! :)">
+         <font>
+            <Font name="Copperplate Gothic Light" size="14.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="backButton" layoutX="218.0" layoutY="288.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="71.0" prefWidth="163.0" text="Understood!" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

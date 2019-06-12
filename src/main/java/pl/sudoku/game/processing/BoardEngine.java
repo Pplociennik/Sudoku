@@ -3,8 +3,6 @@ package pl.sudoku.game.processing;
 import pl.sudoku.game.entities.Board;
 import pl.sudoku.game.entities.enums.Difficulties;
 
-import java.util.Arrays;
-
 public class BoardEngine {
 
     private BoardGenerator boardGenerator = new BoardGenerator();
@@ -12,7 +10,11 @@ public class BoardEngine {
     private void generateBoardAndSolution(Board aGameBoard, Board aSolutionBoard, Integer aBoardSize, Difficulties aDifficulty) {
         boardGenerator.prepare(aBoardSize, aDifficulty.getDiffCode());
         boardGenerator.fillValues();
-        aSolutionBoard.setValues(boardGenerator.getMat());
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                aSolutionBoard.setSpecificValue(i, j, boardGenerator.getMat()[i][j]);
+            }
+        }
         boardGenerator.removeKDigits();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -34,7 +36,14 @@ public class BoardEngine {
 //    }
 
     public boolean checkIfSolutionCorrect(Board aGameBoard, Board aSolutionBoard) {
-        return Arrays.equals(aGameBoard.getValues(), aSolutionBoard.getValues());
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (aGameBoard.getSpecificValue(i, j) != aSolutionBoard.getSpecificValue(i, j)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public void setValueInSpecificLocation(Board aGameBoard, int height, int width, int value) {

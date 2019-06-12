@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
@@ -10,7 +11,12 @@
 
         <GridPane fx:id="gridMap" BorderPane.alignment="CENTER">
         </GridPane>
-   <Button fx:id="checkButton" layoutX="566.0" layoutY="54.0" mnemonicParsing="false" onAction="#checkSolution" prefHeight="54.0" prefWidth="148.0" text="Check" />
-   <Label fx:id="checkErrorLabel" layoutX="566.0" layoutY="130.0" prefHeight="54.0" prefWidth="148.0" />
+   <Button fx:id="checkButton" layoutX="566.0" layoutY="54.0" mnemonicParsing="false" onAction="#checkSolution" prefHeight="54.0" prefWidth="148.0" text="Check solution" />
+   <Label fx:id="checkErrorLabel" layoutX="566.0" layoutY="188.0" prefHeight="54.0" prefWidth="148.0" textAlignment="CENTER" />
+   <Button fx:id="giveUpButton" layoutX="627.0" layoutY="553.0" mnemonicParsing="false" onAction="#GiveUp" prefHeight="44.0" prefWidth="122.0" text="Give up" />
+   <Button fx:id="tipButton" layoutX="566.0" layoutY="121.0" mnemonicParsing="false" onAction="#giveMeATip" prefHeight="54.0" prefWidth="148.0" text="Help me" />
+   <TextField fx:id="nameTextField" layoutX="553.0" layoutY="384.0" prefHeight="24.0" prefWidth="150.0" visible="false" />
+   <Label fx:id="nameLabel" layoutX="597.0" layoutY="366.0" text="Your name:" visible="false" />
+   <Button fx:id="submitNameButton" layoutX="640.0" layoutY="410.0" mnemonicParsing="false" onAction="#savePlayerResult" text="Submit" visible="false" />
 
 </AnchorPane>

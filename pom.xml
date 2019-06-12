@@ -6,7 +6,7 @@
 
     <groupId>pl.sudoku.game</groupId>
     <artifactId>Sudoku</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.4.5-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
@@ -61,6 +61,20 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.2.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
         </dependency>
     </dependencies>
 
