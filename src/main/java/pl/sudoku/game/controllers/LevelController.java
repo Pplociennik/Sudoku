@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import pl.sudoku.game.entities.enums.Difficulties;
 
 public class LevelController {
 
@@ -38,7 +39,7 @@ public class LevelController {
 
     @FXML
     private void showTutorial(ActionEvent event) {
-        new SceneSwitcher().switchScene(event, SceneSwitcher.TUTORIAL_SCENE);
+        new SceneSwitcher().switchScene(event, SceneSwitcher.TUTORIAL_SCENE, Difficulties.MEDIUM);
 
     }
 

@@ -37,6 +37,7 @@ public class BoardController {
     private Label nameLabel;
     @FXML
     private Button submitNameButton;
+    @FXML
 
     private BoardEngine boardEngine = new BoardEngine();
     private Board aBaseBoard = new Board(9);
@@ -46,7 +47,7 @@ public class BoardController {
     PointsCalculator calculator = new PointsCalculator();
     DatabaseController databaseController = new DatabaseController();
 
-    private Difficulties diff = Difficulties.EASY;
+    private Difficulties diff;
 
     public BoardController() {
 
@@ -77,7 +78,7 @@ public class BoardController {
 
     @FXML
     private void GiveUp(ActionEvent event) {
-        new SceneSwitcher().switchScene(event, SceneSwitcher.MAIN_MENU_SCENE);
+        new SceneSwitcher().switchScene(event, SceneSwitcher.MAIN_MENU_SCENE, Difficulties.MEDIUM);
     }
 
     @FXML
