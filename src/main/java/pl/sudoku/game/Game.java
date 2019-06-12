@@ -6,7 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+import org.apache.maven.model.Model;
+import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 
+import java.io.FileReader;
 import java.util.Objects;
 
 public class Game extends Application {
@@ -23,7 +26,11 @@ public class Game extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Sudoku v.1.0.0");
+
+        MavenXpp3Reader reader = new MavenXpp3Reader();
+        Model model = reader.read(new FileReader("pom.xml"));
+
+        primaryStage.setTitle("Sudoku v." + model.getVersion());
 
         Pane root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("start.fxml")));
 
