@@ -77,7 +77,6 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
                 }
                 aGameBoard.setSpecificValue(aX, aY, value);
                 controller.refreshGui();
-                System.out.println(character);
             } catch (NumberFormatException ex) {
                 controller.throwError("Zły format!");
             }
