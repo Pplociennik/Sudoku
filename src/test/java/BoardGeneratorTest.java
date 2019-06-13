@@ -30,7 +30,7 @@ public class BoardGeneratorTest {
                     count++;
                 }
 
-        assertEquals(count,20);
+        assertEquals(count,30);
 
     }
     @Test
@@ -47,7 +47,7 @@ public class BoardGeneratorTest {
                     count++;
                 }
 
-        assertEquals(count,30);
+        assertEquals(count,40);
 
     }
     @Test
@@ -64,7 +64,7 @@ public class BoardGeneratorTest {
                     count++;
                 }
 
-        assertEquals(count,40);
+        assertEquals(count,50);
 
     }
 
