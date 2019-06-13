@@ -37,7 +37,6 @@ public class BoardController {
     private Label nameLabel;
     @FXML
     private Button submitNameButton;
-    @FXML
 
     private SceneSwitcher sceneSwitcher = new SceneSwitcher();
     private int tipsCounter;
@@ -59,7 +58,7 @@ public class BoardController {
     @FXML
     private void checkSolution() {
         if (boardEngine.checkIfSolutionCorrect(aGameBoard, aSolutionBoard)) {
-            checkErrorLabel.setStyle("-fx-text-fill: green");
+            checkErrorLabel.setTextFill(Color.GREEN);
             checkErrorLabel.setStyle("-fx-font-weight: bold");
             checkErrorLabel.setText("SUCCESS!");
 
