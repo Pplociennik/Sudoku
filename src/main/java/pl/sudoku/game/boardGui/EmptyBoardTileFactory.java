@@ -71,14 +71,14 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
                 int value = Integer.parseInt(character);
 
                 if (value <= 0 || value > 9) {
-                    controller.throwError("Podaj 1 < liczbę < 10 !");
+                    controller.throwError("Enter 1 < number < 10 !");
                     boardTile.getTextField().setText("");
                     return;
                 }
                 aGameBoard.setSpecificValue(aX, aY, value);
                 controller.refreshGui();
             } catch (NumberFormatException ex) {
-                controller.throwError("Zły format!");
+                controller.throwError("Wrong format!");
             }
         });
 
