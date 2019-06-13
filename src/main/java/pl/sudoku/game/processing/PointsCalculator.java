@@ -20,8 +20,8 @@ public class PointsCalculator {
         this.diff = diff;
     }
 
-    public long countPlayerPoints() {
+    public long countPlayerPoints(int tipsCounter) {
         long difference = endTime - startTime;
-        return (long) ((((10000) - (difference/10000)) * (1 - diff.getDiffCode() / 100)) % (Math.pow(2, 9) * 6));
+        return (long) 100000 % difference * (diff.getDiffCode() % 100) * (tipsCounter % 100) / 1000;
     }
 }

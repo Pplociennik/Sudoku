@@ -40,6 +40,7 @@ public class BoardController {
     @FXML
 
     private SceneSwitcher sceneSwitcher = new SceneSwitcher();
+    private int tipsCounter;
 
     private BoardEngine boardEngine = new BoardEngine();
     private Board aBaseBoard = new Board(9);
@@ -95,6 +96,7 @@ public class BoardController {
         } while (hasEmpty() && aBaseBoard.getSpecificValue(i, j) != 0);
         aGameBoard.setSpecificValue(i, j, aSolutionBoard.getSpecificValue(i, j));
         aBaseBoard.setSpecificValue(i, j, aSolutionBoard.getSpecificValue(i, j));
+        tipsCounter++;
         refreshGui();
     }
 
@@ -103,7 +105,7 @@ public class BoardController {
         Result result = new Result();
         result.setName(nameTextField.getText());
         result.setDate(new Date().toString());
-        result.setPoints(calculator.countPlayerPoints());
+        result.setPoints(calculator.countPlayerPoints(tipsCounter));
 
         databaseController.sendResult(result);
         sceneSwitcher.switchScene(event, SceneSwitcher.TOP_LIST_SCENE, Difficulties.MEDIUM);
@@ -130,6 +132,7 @@ public class BoardController {
     }
 
     public void startNewGame() {
+        tipsCounter = 0;
         boardEngine.generateNewBoard(aGameBoard, aSolutionBoard, diff);
         int[][] gameValues = aGameBoard.getValues();
         for (int i = 0; i < 9; i++) {
