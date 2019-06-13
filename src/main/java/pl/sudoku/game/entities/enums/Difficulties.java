@@ -1,7 +1,7 @@
 package pl.sudoku.game.entities.enums;
 
 public enum Difficulties {
-    EASY(20), MEDIUM(30), HARD(40);
+    EASY(30), MEDIUM(40), HARD(50);
 
     private final int diffCode;
 

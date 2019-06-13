@@ -3,6 +3,8 @@ package pl.sudoku.game.processing;
 import pl.sudoku.game.entities.Board;
 import pl.sudoku.game.entities.enums.Difficulties;
 
+import java.util.Arrays;
+
 public class BoardEngine {
 
     private BoardGenerator boardGenerator = new BoardGenerator();
@@ -18,7 +20,7 @@ public class BoardEngine {
         boardGenerator.removeKDigits();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                aGameBoard.setSpecificValue(i, j, boardGenerator.getMat()[i][j]);
+                aGameBoard.setSpecificValue(i, j, new Integer(boardGenerator.getMat()[i][j]));
             }
         }
     }

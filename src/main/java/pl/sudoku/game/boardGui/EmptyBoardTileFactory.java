@@ -1,10 +1,12 @@
 package pl.sudoku.game.boardGui;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 import pl.sudoku.game.controllers.BoardController;
 import pl.sudoku.game.entities.Board;
 import pl.sudoku.game.processing.BoardEngine;
@@ -17,6 +19,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
     private final BoardEngine engine;
     private Label boardValues;
     private final BoardController controller;
+    private String color = "white";
 
     public EmptyBoardTileFactory(DefaultBoardTileFactory aTileFactory, Board aBaseBoard, Board aGameBoard, int xPosition, int yPosition, BoardEngine engine, BoardController controller) {
         super();
@@ -37,9 +40,12 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
         if (aGameBoard.getSpecificValue(aX, aY) != 0) {
             boardTile.getTextField().setFont(Font.font("Comic Sans", 30));
             boardTile.getTextField().setStyle("-fx-font-weight: bold");
-            boardTile.getTextField().setStyle("-fx-background-color: orchid");
+            boardTile.setStyle("-fx-background-color: orchid");
+            boardTile.getTextField().setStyle("-fx-border-color: black");
+            color = "orchid";
             boardTile.getTextField().setText(String.valueOf(aGameBoard.getSpecificValue(aX, aY)));
-            valuesPane.setCenter(boardTile.getTextField());
+            boardTile.getTextField().setEditable(true);
+            valuesPane.setCenter(boardTile);
         } else {
 
             boardTile.getTextField();
@@ -55,7 +61,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
             boardTile.getTextField().setStyle("-fx-background-color: yellow");
         });
         boardTile.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, (e) -> {
-            boardTile.getTextField().setStyle("-fx-background-color: white");
+            boardTile.getTextField().setStyle("-fx-background-color: " + color);
             boardTile.getTextField().setStyle("-fx-border-color: black");
             controller.throwError("");
         });
@@ -76,20 +82,7 @@ public class EmptyBoardTileFactory extends DefaultBoardTileFactory {
                 controller.throwError("Zły format!");
             }
         });
-//        boardTile.addEventHandler(MouseEvent.MOUSE_CLICKED, (e) -> {
-//            boardTile.getRect().setFill(Color.YELLOW);
-//            color = Color.YELLOW;
-//
-////            boardTile.addEventHandler(KeyEvent.KEY_TYPED, (k) -> {
-////                if (Integer.parseInt(k.getText()) > 0 && Integer.parseInt(k.getText()) < 10)
-////                    aGameBoard.setSpecificValue(aX, aY, Integer.parseInt(k.getText()));
-////            });
-//
-//
-//            boardTile.getRect().setFill(Color.ORCHID);
-//            color = Color.ORCHID;
-//        });
-//    }
+
 
     }
 }
