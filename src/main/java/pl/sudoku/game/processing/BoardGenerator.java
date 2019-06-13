@@ -26,8 +26,6 @@ public class BoardGenerator {
         // Fill remaining blocks
         fillRemaining(0, SRN);
 
-        // Remove Randomly emptyTilesNo digits to make game
-//        removeKDigits();
     }
 
     // Fill the diagonal SRN number of SRN x SRN matrices
@@ -84,7 +82,7 @@ public class BoardGenerator {
         return true;
     }
 
-    // check in the row for existence
+    // check in the column for existence
     boolean unUsedInCol(Integer j, Integer num) {
         for (int i = 0; i < size; i++)
             if (mat[i][j] == num)
@@ -92,7 +90,6 @@ public class BoardGenerator {
         return true;
     }
 
-    // A recursive function to fill remaining
     // matrix
     boolean fillRemaining(Integer i, Integer j) {
         //  System.out.println(i+" "+j);
@@ -131,14 +128,11 @@ public class BoardGenerator {
     }
 
     // Remove the emptyTilesNo no. of digits to
-    // complete game
     public void removeKDigits() {
         int count = emptyTilesNo;
         while (count != 0) {
             int cellId = randomGenerator(size * size);
 
-            //System.out.println(cellId);
-            // extract coordinates i  and j
             int i = (cellId / size);
             if (i > 1)
                 i--;
